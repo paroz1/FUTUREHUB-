@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Wallet App</title>
+</head>
+<body>
+
+<h2>Simple Wallet</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+<br><br>
+
+<input type="number" id="amount" placeholder="Enter amount">
+<br><br>
+
+<button onclick="deposit()">Deposit</button>
+
+<h3 id="output"></h3>
+
+<script>
+let balance = 0;
+
+function deposit() {
+  let name = document.getElementById("name").value;
+  let amount = Number(document.getElementById("amount").value);
+
+  balance += amount;
+
+  document.getElementById("output").innerHTML =
+    name + ", your balance is: " + balance + " UGX";
+}
+</script>
+
+</body>
+</html>
